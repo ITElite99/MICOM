@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <title>
+        小米商城 - Xiaomi 11 Ultra、Redmi K40 Pro、MIX FOLD，小米电视官方网站
+    </title>
+    <meta name="description" content="小米官网直营小米公司旗下所有产品，包括Xiaomi手机系列Xiaomi 11 Ultra、MIX FOLD，Redmi 红米系列Redmi Note 9、Redmi K40 Pro，小米电视、笔记本、米家智能家居等，同时提供小米客户服务及售后支持." />
+    <meta name="keywords" content="Xiaomi,redmi,Xiaomi11 Ultra,Redmi Note 9,Xiaomi MIX Alpha,小米商城" />
+    <meta name="viewport" content="width=1226" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="css/normalize.css" ></head>
+    <link rel="stylesheet" href="css/index.css" ></head>
+    <link rel="stylesheet" href="iconfont/iconfont.css" ></head>
+</head>
+<body>
+    <div id="app">
+        <!-- 顶部 -->
+        <header class="header">
+            <section class="site-topbar">
+                <div class="container clearfix">
+                    <div id="topBarNavId" class="topbar-nav"></div>
+                    <div id="topBarCartId" class="topbar-cart">
+                        <a rel="nofollow" id="miniCartBtn" href="index.html" class="cart-mini" 
+                            onmouseenter="handleCartChange('over')"
+                            onmouseleave="handleCartChange('out')">
+                            <i class="iconfont icon-cart"></i>
+                            <span>购物车</span>
+                            <span>（0）</span>
+                        </a>
+                        <div id="miniCartMenu" class="cart-menu">
+                            <div class="menu-content">
+                                <div class="loading" id="loadingId">
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="msg msg-empty" id="msgEmptyId">
+                                    <span>购物车中还没有商品，赶紧选购吧！</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="siteUserInfo" class="site-user-info">
+                        <a rel="nofollow" href="index.html" class="login" >登录</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="index.html" class="register" >注册</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="index.html" class="message" >消息通知</a>
+                    </div>
+                </div>
+            </section>
+            <section class="top-navbar">
+
+            </section>
+        </header>
+        <!-- 中部 -->
+        <section class="main-wraper">
+
+        </section>
+        <!-- 底部 -->
+        <footer class="footer">
+
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="utils/ajax.js"></script>
+    <script>
+        var topBarNavId = document.getElementById('topBarNavId')
+        // method, url, data, timeout, success, error
+        ajax({
+            methods: "GET", 
+            url: 'mock/header/site.json', 
+            data: {},
+            success: function(res){
+                var navList = res.data.nav;
+                var navHtml = '';
+                navList.forEach((nav, index) => {
+                    navHtml += 
+                    `<a rel="nofollow" class="" href="#${nav.href}">${nav.name}</a><span class="sep">|</span>`;
+                })
+                topBarNavId.innerHTML = navHtml; 
+            }, 
+            error: function(err){
+                console.log('请求数据site.json失败', err)
+                alert('请求数据site.json失败', err)
+            },
+        })
+
+        function handleCartChange(type) {
+            var miniCartMenu = document.getElementById('miniCartMenu');
+            var miniCartBtn = document.getElementById('miniCartBtn');
+            var loadingId = document.getElementById('loadingId');
+            var msgEmptyId = document.getElementById('msgEmptyId');
+            if(type === 'over') {
+                loadingId.style.display= 'block';
+                msgEmptyId.style.display= 'none';
+                miniCartMenu.style.height = '100px';
+                miniCartMenu.style.opacity = '1';
+                miniCartBtn.style.transitionDelay= 'unset';
+                var timer = setTimeout(function(){
+                    loadingId.style.display= 'none';
+                    msgEmptyId.style.display= 'block';
+                    clearTimeout(timer)
+                }, 400)
+            }
+            else if(type === 'out') {
+                loadingId.style.display= 'none';
+                msgEmptyId.style.display= 'block';
+                miniCartMenu.style.height = '0';
+                miniCartMenu.style.opacity = '0';
+                miniCartBtn.style.transitionDelay= '0.4s';
+                
+            }
+        }
+    </script>
+</body>
+</html>

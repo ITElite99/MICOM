@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+.header .site-topbar{
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+
+.header .site-topbar .container{
+    width: 1226px;
+    margin: 0 auto;
+}
+.header .site-topbar .container .topbar-nav{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.header .site-topbar .container .topbar-nav a{
+    color: #b0b0b0;
+    line-height: 40px;
+    display: inline-block;
+}
+.header .site-topbar .container .topbar-nav a:hover{
+    color: #fff;
+}
+.header .site-topbar .container .topbar-nav .sep{
+    margin: 0 0.4em;
+    color: #424242;
+}
+.header .site-topbar .container .topbar-nav .sep:nth-last-child(1){
+    display: none;
+}
+.header .site-topbar .container .topbar-cart{
+    position: relative;
+    float: right;
+    margin-left: 15px;
+    transition: all 0.3s;
+    font-size: 12px;
+}
+.header .site-topbar .container .topbar-cart .cart-mini{
+    display: inline-block;
+    color: #b0b0b0;
+    line-height: 40px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0 14px;
+    background-color: #424242;
+    transition: all 0.3s;
+}
+.header .site-topbar .container .topbar-cart .cart-mini:hover{
+    color: #ff6700;
+    background-color: #fff;
+}
+.header .site-topbar .container .topbar-cart .cart-mini span{
+    padding-left: 4px;
+}
+.header .site-topbar .container .topbar-cart .cart-menu {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 312px;
+    height: 0;
+    color: #424242;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all .3s;
+    z-index: 100;
+    opacity: 0;
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content{
+    padding: 20px 0 0;
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading,
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .msg-empty{
+    margin: 0 20px 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .msg-empty{
+    display: none;
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader{
+    position: relative;
+    margin: 0 auto;
+    width: 4px;
+    height: 20px;
+    background: #ff6700;
+    overflow: visible;
+    animation-delay: 0s;
+    transform: scale(1);
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader,
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader:before,
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader:after{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 20px;
+    content: "";
+    background: #ff6700;
+
+    transform-origin: 50% 50%;
+    animation-name: loader;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader:before{
+    margin: -10px 0 0 -10px;
+    animation-delay: 0.25s;
+    transform: scaleY(.3);
+}
+.header .site-topbar .container .topbar-cart .cart-menu .menu-content .loading .loader:after{
+    margin: -10px 0 0 6px;
+    animation-delay: 0.5s;
+    transform: scaleY(0.5);
+}
+
+@-webkit-keyframes loader {
+    0% {
+        -webkit-transform: scaleY(.5);
+        opacity: .2
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+        opacity: .2
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+.header .site-topbar .container .site-user-info{
+    float: right;
+    color: #b0b0b0;
+    height: 40px;
+    line-height: 40px;
+}
+.header .site-topbar .container .site-user-info a{
+    color: #b0b0b0;
+    height: 40px;
+    line-height: 40px;
+}
+.header .site-topbar .container .site-user-info a:hover{
+    color: #fff;
+}
+.header .site-topbar .container .site-user-info .sep{
+    margin: 0 4px;
+    color: #424242;
+}

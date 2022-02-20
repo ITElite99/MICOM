@@ -1,0 +1,52 @@
+{
+    "nav": [
+        {
+            "name": "小米商城",
+            "href": "/index.html"
+        },
+        {
+            "name": "MIUI",
+            "href": "/index.html"
+        },
+        {
+            "name": "IOT",
+            "href": "/index.html"
+        },
+        {
+            "name": "云服务",
+            "href": "/index.html"
+        },
+        {
+            "name": "天星数科",
+            "href": "/index.html"
+        },
+        {
+            "name": "有品",
+            "href": "/index.html"
+        },
+        {
+            "name": "小爱开放平台",
+            "href": "/index.html"
+        },
+        {
+            "name": "企业团购",
+            "href": "/index.html"
+        },
+        {
+            "name": "资质证照",
+            "href": "/index.html"
+        },
+        {
+            "name": "协议规则",
+            "href": "/index.html"
+        },
+        {
+            "name": "下载app",
+            "href": "/index.html"
+        },
+        {
+            "name": "Select Location",
+            "href": "/index.html"
+        }
+    ]
+}
