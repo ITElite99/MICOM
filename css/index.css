@@ -162,3 +162,89 @@
     margin: 0 4px;
     color: #424242;
 }
+
+
+.header .site-header{
+    z-index: 20;
+    height: 100px;
+    position: relative;
+}
+.header .site-header .container{
+    width: 1226px;
+    margin: 0 auto;
+    position: relative;
+}
+.header .site-header .container .header-logo{
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
+.header .site-header .container .header-logo .ir{
+    display: block;
+    text-align: left;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.header .site-header .container .header-logo .logo{
+    position: relative;
+    display: block;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+}
+.header .site-header .container .header-logo .logo:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 56px;
+    height: 56px;
+    content: "";
+    transform-origin: 50% 50%;
+}
+.header .site-header .container .header-logo .logo:before{
+    background: url("../images/header/logo-mi2.png") no-repeat;
+    background-size: 56px 56px;
+    transform: translateZ(0);
+}
+.header .site-header .container .header-logo .logo:before{
+    opacity: 1;
+}
+
+.header .site-header .container .header-nav{
+    float: left;
+}
+.header .site-header .container .header-nav .nav-list{
+    width: 1100px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    list-style-type: none;
+    font-size: 16px;
+}
+.header .site-header .container .header-nav .nav-list .nav-category{
+    float: left;
+    width: 127px;
+    padding-right: 15px;
+}
+.header .site-header .container .header-nav .nav-list .nav-category .link-category{
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+}
+.header .site-header .container .header-nav .nav-list .nav-item{
+    float: left;
+}
+.header .site-header .container .header-nav .nav-list .nav-item a{
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+    transition: color .2s;
+}
+.header .site-header .container .header-nav .nav-list .nav-item a:hover{
+    color: #ff6700;
+}
+.header .site-header .container .header-search{
+    float: right;
+}

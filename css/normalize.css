@@ -28,6 +28,14 @@ ul {
     visibility: hidden;
     clear: both;
 }
+.clearfixFloat:before,
+.clearfixFloat:after{
+    content: " ";
+    display: table;
+}
+.clearfixFloat:after{
+    clear: both;
+}
 .flex-center{
     display: flex;
     display: -webkit-flex;
