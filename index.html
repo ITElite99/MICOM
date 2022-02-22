@@ -71,7 +71,18 @@
                             <li class="nav-item"><a href="javascript: void(0);">社区</a> </li>
                         </ul>
                     </div>
-                    <div class="header-search"></div>
+                    <div class="header-search">
+                        <form id="searchForm" action="/index.html" method="get" class="search-form clearfixFloat">
+                            <label for="search" class="hide">站内搜索</label>
+                            <a class="no-style-msq">
+                                <input type="search" id="search" name="keyword" 
+                                    autocomplete="off" class="search-text" placeholder="手机"/>
+                            </a>
+                            <a id="submitBtn" class="no-style-msq">
+                                <i class="search-btn iconfont icon-search"></i>
+                            </a>
+                        </form>
+                    </div>
                 </div>
             </section>
         </header>
@@ -119,6 +130,7 @@
                 msgEmptyId.style.display= 'none';
                 miniCartMenu.style.height = '100px';
                 miniCartMenu.style.opacity = '1';
+                miniCartMenu.style.zIndex = '100';
                 miniCartBtn.style.transitionDelay= 'unset';
                 var timer = setTimeout(function(){
                     loadingId.style.display= 'none';
@@ -131,6 +143,7 @@
                 msgEmptyId.style.display= 'block';
                 miniCartMenu.style.height = '0';
                 miniCartMenu.style.opacity = '0';
+                miniCartMenu.style.zIndex = '-1';
                 miniCartBtn.style.transitionDelay= '0.4s';
                 
             }

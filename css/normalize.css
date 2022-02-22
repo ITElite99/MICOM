@@ -17,6 +17,10 @@ a, a:hover{
 ul {
     list-style: none;
 }
+form{
+    display: block;
+    margin-top: 0px;
+}
 .clearfix{
     zoom: 1;
 }
@@ -41,4 +45,7 @@ ul {
     display: -webkit-flex;
     justify-content: center;
     align-items: center;
+}
+.hide{
+    display: none !important;
 }
