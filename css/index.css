@@ -330,3 +330,44 @@
 input[type="search"]::-webkit-search-cancel-button {
 	display: none;
 }  
+
+.header .site-header .header-nav-menu{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 24;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
+    overflow: hidden;
+} 
+.header .site-header .header-nav-menu.slide-up{
+    height: 0;
+}
+.header .site-header .header-nav-menu.slide-down{
+    height: 229px;
+}
+.header .site-header .header-nav-menu.header-nav-menu-active{
+    border-bottom: 1px solid #e0e0e0;
+    -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+    -webkit-transition: height .3s, -webkit-box-shadow .2s;
+    transition: height .3s, -webkit-box-shadow .2s;
+    transition: box-shadow .2s, height .3s;
+    transition: box-shadow .2s, height .3s, -webkit-box-shadow .2s;
+}
+.header .site-header .header-nav-menu .children-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 12px;
+}
+.header .site-header .header-nav-menu .children-list li{
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+}
+

@@ -1,0 +1,172 @@
+{
+    "Xiaomi": [
+        {
+            "img": "xiaomi.webp",
+            "alt": "Xiaomi 12 Pro",
+            "name": "Xiaomi 12 Pro",
+            "price": "4699元起"
+        },
+        {
+            "img": "xiaomi.webp",
+            "alt": "Xiaomi 12 Pro",
+            "name": "Xiaomi 12 Pro",
+            "price": "4699元起"
+        },
+        {
+            "img": "xiaomi.webp",
+            "alt": "Xiaomi 12 Pro",
+            "name": "Xiaomi 12 Pro",
+            "price": "4699元起"
+        },
+        {
+            "img": "xiaomi.webp",
+            "alt": "Xiaomi 12 Pro",
+            "name": "Xiaomi 12 Pro",
+            "price": "4699元起"
+        },
+        {
+            "img": "xiaomi.webp",
+            "alt": "Xiaomi 12 Pro",
+            "name": "Xiaomi 12 Pro",
+            "price": "4699元起"
+        }
+    ],
+    "Redmi": [
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        },
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        },
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        },
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        },
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        },
+        {
+            "img": "Redmi.webp",
+            "alt": "Redmi K50",
+            "name": "Redmi K50 电竞版",
+            "price": "3299元起"
+        }
+    ],
+    "dianshi": [
+        {
+            "img": "dianshi.webp",
+            "alt": "Redmi智能电视X65 2022款",
+            "name": "Redmi智能电视X65 2022款",
+            "price": "6999元起"
+        },
+        {
+            "img": "dianshi.webp",
+            "alt": "Redmi智能电视X65 2022款",
+            "name": "Redmi智能电视X65 2022款",
+            "price": "6999元起"
+        },
+        {
+            "img": "dianshi.webp",
+            "alt": "Redmi智能电视X65 2022款",
+            "name": "Redmi智能电视X65 2022款",
+            "price": "6999元起"
+        },
+        {
+            "img": "dianshi.webp",
+            "alt": "Redmi智能电视X65 2022款",
+            "name": "Redmi智能电视X65 2022款",
+            "price": "6999元起"
+        },
+        {
+            "img": "dianshi.webp",
+            "alt": "Redmi智能电视X65 2022款",
+            "name": "Redmi智能电视X65 2022款",
+            "price": "6999元起"
+        }
+    ],
+    "bijiben": [
+        {
+            "img": "bijiben.webp",
+            "alt": "RedmiBook Pro 15",
+            "name": "RedmiBook Pro 15 增强版",
+            "price": "5299元起"
+        },
+        {
+            "img": "bijiben.webp",
+            "alt": "RedmiBook Pro 15",
+            "name": "RedmiBook Pro 15 增强版",
+            "price": "5299元起"
+        },
+        {
+            "img": "bijiben.webp",
+            "alt": "RedmiBook Pro 15",
+            "name": "RedmiBook Pro 15 增强版",
+            "price": "5299元起"
+        },
+        {
+            "img": "bijiben.webp",
+            "alt": "RedmiBook Pro 15",
+            "name": "RedmiBook Pro 15 增强版",
+            "price": "5299元起"
+        }
+    ],
+    "pingban": [
+        {
+            "img": "pingban.webp",
+            "alt": "小米平板5 Pro 5G",
+            "name": "小米平板5 Pro 5G",
+            "price": "3299元起"
+        },
+        {
+            "img": "pingban.webp",
+            "alt": "小米平板5 Pro 5G",
+            "name": "小米平板5 Pro 5G",
+            "price": "3299元起"
+        },
+        {
+            "img": "pingban.webp",
+            "alt": "小米平板5 Pro 5G",
+            "name": "小米平板5 Pro 5G",
+            "price": "3299元起"
+        }
+    ],
+    "jiadian": [
+        {
+            "img": "jiadian.webp",
+            "alt": "米家空调 新一级 1.5匹 睡眠版",
+            "name": "米家空调 新一级 1.5匹 睡眠版",
+            "price": "3299元起"
+        }
+    ],
+    "luyouqi": [
+        {
+            "img": "luyouqi.webp",
+            "alt": "Redmi电竞路由器AX5400",
+            "name": "Redmi电竞路由器AX5400",
+            "price": "599元起"
+        },
+        {
+            "img": "luyouqi.webp",
+            "alt": "Redmi电竞路由器AX5400",
+            "name": "Redmi电竞路由器AX5400",
+            "price": "599元起"
+        }
+    ]
+}
