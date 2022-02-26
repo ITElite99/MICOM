@@ -52,23 +52,23 @@
                     </div>
                 </div>
             </section>
-            <section class="site-header">
+            <section class="site-header" id="siteHeaderId">
                 <div class="container clearfixFloat">
                     <div class="header-logo">
                         <a href="index.html" title="小米官网" class="logo ir">小米官网</a>
                     </div>
                     <div class="header-nav">
                         <ul class="nav-list clearfixFloat">
-                            <li class="nav-category"><a href="javascript: void(0);" class="link-category">全部商品分类</a></a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('Xiaomi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >Xiaomi手机</a></a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('Redmi')" onmouseleave="closeShowNavMenu()" ><a href="javascript: void(0);" >Redmi红米</a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('dianshi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >电视</a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('bijiben')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >笔记本</a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('pingban')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >平板</a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('jiadian')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >家电</a> </li>
-                            <li class="nav-item"onmouseenter="showNavMenu('luyouqi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" >路由器</a> </li>
-                            <li class="nav-item"><a href="javascript: void(0);" >服务</a> </li>
-                            <li class="nav-item"><a href="javascript: void(0);" >社区</a> </li>
+                            <li class="nav-category"><a href="javascript: void(0);" class="link-category">全部商品分类</a></li>
+                            <li class="nav-item" onmouseenter="showNavMenu('Xiaomi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);"  class="Xiaomi">Xiaomi手机</a></li>
+                            <li class="nav-item" onmouseenter="showNavMenu('Redmi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);"   class="Redmi">Redmi红米</a> </li>
+                            <li class="nav-item" onmouseenter="showNavMenu('dianshi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="dianshi">电视</a> </li>
+                            <li class="nav-item" onmouseenter="showNavMenu('bijiben')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="bijiben">笔记本</a> </li>
+                            <li class="nav-item" onmouseenter="showNavMenu('pingban')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="pingban">平板</a> </li>
+                            <li class="nav-item" onmouseenter="showNavMenu('jiadian')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="jiadian">家电</a> </li>
+                            <li class="nav-item" onmouseenter="showNavMenu('luyouqi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="luyouqi">路由器</a> </li>
+                            <li class="nav-item"><a href="javascript: void(0);" class="fuwu">服务</a> </li>
+                            <li class="nav-item"><a href="javascript: void(0);" class="shequ">社区</a> </li>
                         </ul>
                     </div>
                     <div class="header-search">
@@ -103,7 +103,7 @@
                         </form>
                     </div>
                 </div>
-                <div id="navMenu" class="header-nav-menu slide-up slide-down" style="display: none;">
+                <div id="navMenu" class="header-nav-menu slide-up" onmouseenter="showNavMenu()" onmouseleave="closeShowNavMenu()">
                     <div class="container">
                         <ul id="headerNavMenuId" class="children-list clearfixFloat">
                             
@@ -196,41 +196,50 @@
                 data: {},
                 success: function(res){
                     navMenuData = res.data;
-                    console.log(navMenuData, '-----')
                 }, 
                 error: function(err){
-                    console.log('请求数据navMenu.json失败', err)
                     alert('请求数据navMenu.json失败', err)
                 }
             })
         }
 
         function showNavMenu(navMenuCode) {
-            var navMenuList = navMenuData[navMenuCode];
             var headerNavMenu = document.getElementById('headerNavMenuId');
             var navMenuNode = document.getElementById('navMenu');
-            var navMenuHtml = '';
-            navMenuList.forEach((navMenu, index) => {
-                navMenuHtml += 
-                `<li><a class="" href="javascript: void(0);" target="_blank">
-                    <div class="figure figure-thumb">
-                        <img src="images/header/nav-menu/${navMenu.img}" alt="${navMenu.alt}" width="160" height="110">
-                    </div>
-                    <div class="title">${navMenu.name}</div>
-                    <p class="price">${navMenu.price}</p>
-                </a></li>`;
-            })
-            console.log(navMenuHtml)
-            headerNavMenu.innerHTML = navMenuHtml; 
-            navMenuNode.style.display= 'block';
-            navMenuNode.classList.add('slide-down');
-            navMenuNode.classList.add('header-nav-menu-active');
+            var siteHeader = document.getElementById('siteHeaderId');
+            if(navMenuCode) {
+                var navMenuList = navMenuData[navMenuCode];
+                var navMenuHtml = '';
+                navMenuList.forEach((navMenu, index) => {
+                    let className = "";
+                    if(index === 0){
+                        className = "first"
+                    }
+                    navMenuHtml += 
+                    `<li ${index == 0 ? "class='first'" : "" }><a class="" href="javascript: void(0);" target="_blank">
+                        <div class="figure figure-thumb">
+                            <img src="images/header/nav-menu/${navMenu.img}" alt="${navMenu.alt}" width="160" height="110">
+                        </div>
+                        <div class="title">${navMenu.name}</div>
+                        <p class="price">${navMenu.price}</p>
+                    </a></li>`;
+                })
+                headerNavMenu.innerHTML = navMenuHtml; 
+            }
+            setTimeout(() => {
+                siteHeader.classList.add('nav-active');
+                navMenuNode.classList.add('header-nav-menu-active');
+                navMenuNode.classList.add('slide-down');
+            }, 0)
         }
         function closeShowNavMenu() {
             var navMenuNode = document.getElementById('navMenu');
-            navMenuNode.style.display= 'none';
-            navMenuNode.classList.remove('slide-down');
-            navMenuNode.classList.remove('header-nav-menu-active');
+            var siteHeader = document.getElementById('siteHeaderId');
+            setTimeout(() => {
+                navMenuNode.classList.remove('slide-down');
+                navMenuNode.classList.remove('header-nav-menu-active');
+                siteHeader.classList.remove('nav-active');
+            }, 0)
         }
     </script>
 </body>

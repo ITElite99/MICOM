@@ -370,4 +370,22 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 35px 12px 0;
     text-align: center;
 }
+.header .site-header .header-nav-menu .children-list li:not(.first):before{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 1;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: #e0e0ee;
+}
+.header .site-header .header-nav-menu .children-list li .title{
+    color: #333;
+}
+.header .site-header .header-nav-menu .children-list li .price{
+    margin: 0;
+    line-height: 20px;
+    color: #ff6700;
+}
 
