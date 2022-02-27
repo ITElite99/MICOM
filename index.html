@@ -59,7 +59,28 @@
                     </div>
                     <div class="header-nav">
                         <ul class="nav-list clearfixFloat">
-                            <li class="nav-category"><a href="javascript: void(0);" class="link-category">全部商品分类</a></li>
+                            <li class="nav-category">
+                                <a href="javascript: void(0);" class="link-category">全部商品分类</a>
+                                <div class="site-category" style="display: block;">
+                                    <ul id="categoryList" class="site-category-list site-category-list-custom clearfixFloat" >
+                                        <li class="category-item">
+                                            <a class="title">手机<em class="iconfont icon-right"></em></a>
+                                            <div class="children clearfixFloat children-col-4">
+                                               
+                                            </div>
+                                        </li>
+                                        <li class="category-item"><a class="title">电视<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">笔记本 平板<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">家电<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">出行 穿戴<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">智能 路由器<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">电源 配件<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">健康 儿童<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">耳机 音箱<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                        <li class="category-item"><a class="title">生活 箱包<em class="iconfont icon-right"></em></a><div class="children clearfixFloat children-col-4"></div></li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li class="nav-item" onmouseenter="showNavMenu('Xiaomi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);"  class="Xiaomi">Xiaomi手机</a></li>
                             <li class="nav-item" onmouseenter="showNavMenu('Redmi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);"   class="Redmi">Redmi红米</a> </li>
                             <li class="nav-item" onmouseenter="showNavMenu('dianshi')" onmouseleave="closeShowNavMenu()"><a href="javascript: void(0);" class="dianshi">电视</a> </li>
@@ -207,6 +228,8 @@
             var headerNavMenu = document.getElementById('headerNavMenuId');
             var navMenuNode = document.getElementById('navMenu');
             var siteHeader = document.getElementById('siteHeaderId');
+            var search = document.getElementById('search');
+            search.blur();
             if(navMenuCode) {
                 var navMenuList = navMenuData[navMenuCode];
                 var navMenuHtml = '';
